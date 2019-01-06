@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="favicon.ico" />
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="src/css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="src/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="src/css/mdb.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+        />
+        <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="/src/css/flat-ui.min.css"> -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="src/css/jquery-ui.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="src/css/jquery-linedtextarea.css"
+        />
+        <script src="src/js/popper.min.js"></script>
+        <script src="src/js/jquery.min.js"></script>
+        <script src="src/js/user.js"></script>
+        <script src="src/js/jquery-linedtextarea.js"></script>
+        <script src="src/js/jquery-ui.min.js"></script>
+        <script src="src/js/bootstrap.min.js"></script>
+        <!-- <script src="src/js/flat-ui.js"></script> -->
+        <script src="src/js/index.js"></script>
+    </head>
+
+    <body>
+        <div
+            id="sidebar"
+            class="green lighten-5 scrollbar scrollbar-dusty-grass"
+        >
+            <div class="text-center h6">SQL Commander</div>
+            <div class="sidebar-header text-center ">
+                <a href="index.html"
+                    ><i
+                        class="fa fa-home fa-2x green-text"
+                        aria-hidden="true"
+                    ></i
+                ></a>
+                <a onclick="options()" href="#"
+                    ><i
+                        class="fa fa-cog fa-2x green-text"
+                        aria-hidden="true"
+                    ></i
+                ></a>
+            </div>
+            <div class="sidebar-menu"><ul id="database-list"></ul></div>
+        </div>
+        <div id="content" class="scrollbar scrollbar-dusty-grass">
+            <nav class="navbar green">
+                <ul style="display:block" class="navbar-nav">
+                    <li
+                        onclick="showTable(selectedTable)"
+                        class="nav-item btn green accent-4"
+                    >
+                        Browse
+                    </li>
+                    <li onclick="showSQL()" class="nav-item btn green accent-4">
+                        SQL
+                    </li>
+                    <li class="nav-item btn green accent-4">Structure</li>
+                </ul>
+            </nav>
+            <div id="options" style="display: none">
+                <span class="card">
+                    <h4 class="card-header bg-green">Server Connection:</h4>
+                    <div class="card-body">
+                        <table class="option-table">
+                            <tr>
+                                <th>Server address:&nbsp;</th>
+                                <td>
+                                    <input
+                                        id="option-ip"
+                                        class="form-control"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>User:</th>
+                                <td>
+                                    <input
+                                        id="option-user"
+                                        class="form-control"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Password:</th>
+                                <td>
+                                    <input
+                                        id="option-pass"
+                                        type="password"
+                                        class="form-control"
+                                    />
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br />
+                        <button onclick="saveOption()" class="btn btn-green">
+                            Save
+                        </button>
+                    </div>
+                </span>
+            </div>
+            <div id="result"></div>
+        </div>
+    </body>
+    <script src="src/js/mdb.min.js"></script>
+    <script src="src/js/sorttable.js"></script>
+</html>
