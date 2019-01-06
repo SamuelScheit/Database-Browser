@@ -75,7 +75,7 @@ if (isset($_GET['sql'])) {
     }
 
 
-    echo json_encode($data);
+    echo htmlspecialchars(json_encode($data), ENT_NOQUOTES, 'UTF-8');
     //}
 }
 ?>
