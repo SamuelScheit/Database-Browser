@@ -4,7 +4,7 @@ A simple Database-Browser in HTML, CSS, JS and PHP with which you can view and c
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -12,9 +12,7 @@ You need to install the LAMP stack: https://www.linode.com/docs/web-servers/lamp
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+To install it, enter these commands in your Terminal:
 
 ```
 cd /var/www/html/
