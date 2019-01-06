@@ -35,6 +35,7 @@ if (isset($_GET['sql'])) {
         $conn->query("USE ".$_GET['db']);
     }
 
+    /*
     if (isset($_GET['multi'])) {
         $result = $conn->multi_query($_GET['sql']);
 
@@ -50,31 +51,31 @@ if (isset($_GET['sql'])) {
             }
         } while ($conn->next_result());
 
-    } else {
-        $result = $conn->query($_GET['sql']);
-        
-        $data = array();
+    } else {*/
 
-        if (!empty($conn->error)) {
-            exit($conn->error);
-        }
+    $result = $conn->query($_GET['sql']);
+    
+    $data = array();
 
-        if (is_object($result) == 0) {
-            exit("[]");
-            if ($result->num_rows > 0) {
-                exit("no result");
-            }
-        }
-
-        $i = 0;
-        while($row = $result->fetch_assoc()) {
-            $data[$i] = $row;
-            $i++;
-        }
-
-
-        echo json_encode($data);
+    if (!empty($conn->error)) {
+        exit($conn->error);
     }
+
+    if (is_object($result) == 0) {
+        exit("[]");
+        if ($result->num_rows > 0) {
+            exit("no result");
+        }
+    }
+
+    $i = 0;
+    while($row = $result->fetch_assoc()) {
+        $data[$i] = $row;
+        $i++;
+    }
+
+
+    echo json_encode($data);
+    //}
 }
-// UPDATE users SET name = 'samuel.scheit@e.com' WHERE users.id = 1;
 ?>
