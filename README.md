@@ -1,4 +1,5 @@
 # Database Browser
+## Archived
 
 A simple Database-Browser in HTML, CSS, JS and PHP with which you can view and change MYSQL Databases
 
